@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ninetoothed"
+version = "0.26.0+ss5.1"
+description = "NineToothed 0.26.0 with the SS5 gfx936 AOT compatibility patches"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["numpy>=1.26.4", "sympy>=1.13.0", "triton>=3.0.0"]
+
+[tool.setuptools.packages.find]
+include = ["ninetoothed*"]
+
+[tool.setuptools.package-data]
+ninetoothed = ["templates/*.h"]

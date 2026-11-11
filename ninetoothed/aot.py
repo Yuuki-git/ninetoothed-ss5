@@ -193,6 +193,8 @@ def _generate_dispatcher(kernel_name, launch_arg_names, variant_specs, tensor_nd
             )
 
     body_lines = prelude_lines + branches
+    if len(variant_specs) == 1 and variant_specs[0][0] == "gfx936":
+        body_lines = [f"    return launch_{kernel_name}_gfx936({call_args});"]
 
     source = (
         f'#include "{_HEADER_PATH}"\n\n'
@@ -291,7 +293,8 @@ def _build_variant(
     )
 
     c_source_file_name = f"{kernel_name}.{signature_hash}.c"
-    c_source_file = output_contents[c_source_file_name]
+    hip_source = output_contents.get(f"{kernel_name}.{signature_hash}.cpp")
+    c_source_file = output_contents[c_source_file_name] if hip_source is None else hip_source
 
     c_header_file_name = f"{kernel_name}.{signature_hash}.h"
     c_header_file = output_contents[c_header_file_name]
@@ -304,6 +307,9 @@ def _build_variant(
     unparser = _Unparser(c_param_type_strings, constexpr_strides)
 
     launch_func_unparsed = unparser.unparse(launch_func)
+    if hip_source is not None:
+        return _ss5_hip_variant(hip_source, _HEADER_PATH, launch_func_unparsed,
+                                func.__name__, kernel_name, kernel_name_with_hash, variant_suffix)
     launch_func_unparsed_lines = launch_func_unparsed.splitlines()
     launch_func_unparsed_lines.insert(1, f"{_INDENTATION}cuCtxGetId(NULL, &ctx_id);\n")
     launch_func_unparsed_lines.insert(1, f"{_INDENTATION}unsigned long long ctx_id;")
