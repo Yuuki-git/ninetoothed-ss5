@@ -1,0 +1,28 @@
+{
+  "distribution": "ninetoothed",
+  "version": "0.26.0",
+  "wheel_url": "https://pypi.org/project/ninetoothed/0.26.0/",
+  "wheel_sha256": "7f15a35b308f00659c63508ff14f964f431234397e5dc97f73e2e4008ab51f08",
+  "files": {
+    "ninetoothed/__init__.py": "3c1de7cf4efee36a76043a2a0087111fadde36a14cdb5fc2d2db6eb0c8c50671",
+    "ninetoothed/aot.py": "ba6fca1cd9f38867555c152a44877477650bd9c740c009e79d0856e2d7e18536",
+    "ninetoothed/auto_tuner.py": "5dc6ba46f5b2225c4f30cc2cf02956d7cf3af4d3d8c0e8a1dfa6c513e0602bf3",
+    "ninetoothed/build.py": "0c44bc7e810d765373fa6a445cc7ab9cf4c9ac105857d9db72a24a130bc57448",
+    "ninetoothed/cudaifier.py": "223aade73e7cf5e2c1be53b597f6c10bc5a73ad2ba5c8dc316d45c6bc1d215d3",
+    "ninetoothed/debugging.py": "c943f7b477f0a6079001fc26ff2f345bcd87196fa362c48224e484c57859f93d",
+    "ninetoothed/dtype.py": "727c8d92bedaf0f0c112456c170d47144e135cc864c1d9bdde6b31b4b0c519ec",
+    "ninetoothed/eval.py": "8b04411f86580fb4ca9ff76be9b31dd990c40f655892ad6c04241340cc01bd69",
+    "ninetoothed/generation.py": "8863013c70fb5bdc131f1078c7b1e0ddbfdd68336a625dfb2811c781e345fe3d",
+    "ninetoothed/jit.py": "13c979edf5ba35329fcda4608a370fdbd39ee2cd6fcdec502e86818cecbc3caa",
+    "ninetoothed/language.py": "111880e1da708a8c36013db115e156620d4aaa59c1a3ac713c6a7c559acfd0b9",
+    "ninetoothed/make.py": "910bcd7effcee3a40a4fe4dbfd206a7b0e273bc84da63a61d16fef9576f6f015",
+    "ninetoothed/naming.py": "165d31e1e0d14ad4e99178c983ad7bf44ac49d8edb479422d004fa457f42ddf5",
+    "ninetoothed/symbol.py": "9e19094312cfbcc4b863c1d013248e76f1fde7f53a7fec3029eab26e4e95fdee",
+    "ninetoothed/tensor.py": "eed5ff59241e3d2ad58adb3123a823892790807405d4bcdb29e171c192942583",
+    "ninetoothed/torchifier.py": "e1c37afa36c9590b1cbaeaa69023987b4184b25f051c3ceb493beba027f2d9cd",
+    "ninetoothed/utils.py": "9ad4570010553e79607769f544487da01decff96d4b0a85dde2c2ede82790d24",
+    "ninetoothed/visualization.py": "264e6580de0effdc8d33cd5fc43d6e5229102e70c50868640f92a9ad146176c8",
+    "ninetoothed/templates/auto_tuning_cache.h": "a4196dc30e0fa6b27a2e718294912fa890bf6834ddead31897ca950428a177cf",
+    "ninetoothed/templates/thread_safe_unordered_map.h": "e1b618a39f9e06a00f2dd59e010916d7a13dd57c84da269f66b791ef7e64d17a"
+  }
+}
